@@ -189,7 +189,7 @@ ul li a:hover:not(.active) {
 #blog {
   background: #000000;
   align-items: center;
-  background-image: url("/images/blog_bg.png");
+  background-image: url("images/blog_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-start;
@@ -445,7 +445,7 @@ ul li a:hover:not(.active) {
 #about {
   align-items: center;
   background: #000;
-  background-image: url("/images/bg_castle.png");
+  background-image: url("images/bg_castle.png");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-start;
