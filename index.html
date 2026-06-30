@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yago · Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== MENU ===== -->
+    <ul>
+      <li><a class="active" data-page="home">Menu</a></li>
+      <li><a data-page="news">Notícias</a></li>
+      <li><a data-page="blog">Projetos</a></li>
+      <li style="float: right"><a data-page="about">Sobre</a></li>
+    </ul>
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <h1>Yago Diehl · Portfólio</h1>
+        <p>
+          Bem-vindo ao meu espaço criativo! Aqui reúno projetos, ideias e um
+          pouco sobre mim.<br />
+          Use o menu acima para navegar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== NOTÍCIAS ===== -->
+    <section id="news" class="page">
+      <div class="news-container">
+        <h2>NOVIDADES</h2>
+        <div class="news-item">
+          <h3>Site Novo</h3>
+          <time>30/06/2026</time>
+          <p>Criação do meu site portólio!</p>
+        </div>
+        <div class="news-item">
+          <h3>Novo projeto: Cinemundo</h3>
+          <time>28/06/2026</time>
+          <p>
+            Criação de um site com sistema de compra de ingressos de cinema.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS (BLOG) ===== -->
+    <section id="blog" class="page">
+      <div class="blog-container">
+        <h2>PROJETOS</h2>
+        <div id="posts-container"></div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section id="about" class="page">
+      <div class="container">
+        <h1>QUEM SOU EU?</h1>
+        <br />
+        <p>
+          Olá! Meu nome é <span class="yellow">Yago</span>, tenho
+          <span class="idade"></span> anos e moro<br />
+          no <span class="yellow">Brasil</span>. Abaixo alguns fatos sobre
+          este<br />
+          que vos fala:
+          <br /><br />
+          <span class="yellow">Interesses &amp; Hobbies:</span><br />
+          → Jogar no computador;<br />
+          → Ler livros/mangás;<br />
+          → Assistir séries/animes;<br />
+          → Conversar com amigos online.<br /><br />
+
+          <span class="yellow">Preferências Culturais:</span><br />
+          <span class="tooltip-trigger">
+            HQs e Mangás
+            <span class="tooltip-content">
+              <strong>HQs:</strong><br />
+              ⟶ INVENCIBLE<br />
+              ⟶ BRZRKR <span class="check">[✔]</span><br />
+              <br />
+              <strong>MANGÁS:</strong><br />
+              ⟶ DEMON SLAYER <span class="check">[✔]</span><br />
+              ⟶ BERSERK<br />
+              <br />
+              <strong>SUMÁRIO:</strong><br />
+              <span class="check">[✔]</span> = Já finalizado
+            </span>
+          </span>
+          <br />
+          <span class="tooltip-trigger">
+            Séries
+            <span class="tooltip-content">
+              <strong>SÉRIES e ANIMAÇÕES:</strong><br />
+              ⟶ THE OFFICE <span class="check">[✔]</span><br />
+              ⟶ BREAKING BAD <span class="check">[✔]</span><br />
+              ⟶ SAMURAI JACK <span class="check">[✔]</span><br />
+              ⟶ BETTER CALL SAUL <span class="check">[✔]</span><br />
+              ⟶ PRIMAL<br />
+              ⟶ GRAVITY FALLS <span class="check">[✔]</span><br />
+              ⟶ ADVENTURE TIME <span class="check">[✔]</span><br />
+              <br />
+              <strong>SUMÁRIO:</strong><br />
+              <span class="check">[✔]</span> = Já finalizado
+            </span>
+          </span>
+          <br /><br />
+
+          <span class="yellow">Formações:</span><br />
+          <a href="https://fundacao.bradesco" target="_blank"
+            >E.E.B.P. Fundação Bradesco</a
+          ><br /><br />
+
+          <span class="yellow">Redes Sociais:</span><br />
+          <img src="images/icon_ytb.png" alt="youtube" class="social-icon" />
+          <a href="https://www.youtube.com/@y4go2077" target="_blank"
+            >YouTube</a
+          >
+          &nbsp;|&nbsp;
+          <img
+            src="images/icon_sw.png"
+            alt="switch"
+            class="social-icon small"
+          />
+          <a href="https://ibb.co/nNpjHYJC" target="_blank">Switch</a>
+          &nbsp;|&nbsp;
+          <img
+            src="images/icon_bcklggd.png"
+            alt="backloggd"
+            class="social-icon"
+          />
+          <a href="https://backloggd.com/u/Yago2077/" target="_blank"
+            >Backloggd</a
+          ><br />
+          <img src="images/icon_stm.png" alt="steam" class="social-icon" />
+          <a href="https://steamcommunity.com/id/venom2077" target="_blank"
+            >Steam</a
+          >
+          &nbsp;|&nbsp;
+          <img
+            src="images/icon_ltbxd.png"
+            alt="letterboxd"
+            class="social-icon small"
+          />
+          <a href="https://letterboxd.com/Venom2077/" target="_blank"
+            >Letterboxd</a
+          >
+          &nbsp;|&nbsp;
+          <img
+            src="images/icon_ttk.png"
+            alt="tiktok"
+            class="social-icon small"
+          />
+          <a href="https://www.tiktok.com/@venom_2077" target="_blank"
+            >TikTok</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+    <script>
+      (function () {
+        "use strict";
+
+        // ============================================================
+        //  PROJETOS FIXOS (adicione/remova aqui)
+        // ============================================================
+        const projetosFixos = [
+          {
+            title: "Projeto Cinemundo",
+            author: "Yago Diehl",
+            content:
+              "Sistema de compra de ingressos de cinema inspirado em grandes redes. Atualmente apenas showcase do esboço de design.",
+            link: "https://yago2077.github.io/projeto_cinemundo/",
+            date: "2026-06-28",
+            time: "15:00",
+            media: [],
+          },
+          // Adicione mais projetos seguindo o mesmo formato
+        ];
+
+        // ---- NAVEGAÇÃO ----
+        const menuLinks = document.querySelectorAll("ul li a[data-page]");
+        const pages = {
+          home: document.getElementById("home"),
+          news: document.getElementById("news"),
+          blog: document.getElementById("blog"),
+          about: document.getElementById("about"),
+        };
+
+        function showPage(pageId) {
+          Object.values(pages).forEach((p) => p.classList.remove("active"));
+          if (pages[pageId]) pages[pageId].classList.add("active");
+          menuLinks.forEach((link) => {
+            link.classList.toggle("active", link.dataset.page === pageId);
+          });
+          if (history.pushState) {
+            history.pushState({ page: pageId }, "", "#" + pageId);
+          }
+        }
+
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPage(this.dataset.page);
+          });
+        });
+
+        const hash = window.location.hash.replace("#", "") || "home";
+        showPage(pages[hash] ? hash : "home");
+
+        window.addEventListener("popstate", function (e) {
+          if (e.state && e.state.page) showPage(e.state.page);
+        });
+
+        // ---- IDADE ----
+        function calcularIdade() {
+          const nasc = new Date(2004, 6, 1);
+          const hoje = new Date();
+          let idade = hoje.getFullYear() - nasc.getFullYear();
+          const mes = hoje.getMonth();
+          const dia = hoje.getDate();
+          if (
+            mes < nasc.getMonth() ||
+            (mes === nasc.getMonth() && dia < nasc.getDate())
+          ) {
+            idade--;
+          }
+          return idade;
+        }
+
+        document.querySelectorAll(".idade").forEach((el) => {
+          el.textContent = calcularIdade();
+        });
+
+        // ---- BLOG (somente exibição de projetos, sem comentários) ----
+        const meses = [
+          "Jan",
+          "Fev",
+          "Mar",
+          "Abr",
+          "Mai",
+          "Jun",
+          "Jul",
+          "Ago",
+          "Set",
+          "Out",
+          "Nov",
+          "Dez",
+        ];
+
+        function formatarDataHora(dataString, horaString) {
+          const partes = dataString.split("-");
+          const dia = partes[2];
+          const mes = meses[parseInt(partes[1]) - 1];
+          const ano = partes[0];
+          const hora = horaString ? horaString.substring(0, 5) : "00:00";
+          return `${hora} • ${dia}/${mes}/${ano}`;
+        }
+
+        function renderPosts() {
+          const container = document.getElementById("posts-container");
+          if (!container) return;
+
+          // Pega posts salvos no localStorage
+          const postsSalvos = JSON.parse(localStorage.getItem("posts")) || [];
+
+          // Combina: primeiros os fixos, depois os salvos
+          const todosPosts = [...projetosFixos, ...postsSalvos];
+
+          if (todosPosts.length === 0) {
+            container.innerHTML =
+              '<p style="color:#aaa;">Nenhum projeto cadastrado ainda.</p>';
+            return;
+          }
+
+          let html = "";
+          todosPosts.forEach((post) => {
+            // Link para o repositório (se existir)
+            const linkHTML = post.link
+              ? `<a href="${post.link}" target="_blank" class="project-link">🔗 Ver no GitHub</a>`
+              : "";
+
+            // Mídia (imagens / vídeo)
+            const images = (post.media || [])
+              .filter((m) => m.type === "image")
+              .slice(0, 4);
+            const video = (post.media || []).find((m) => m.type === "video");
+
+            let mediaHTML = "";
+            if (images.length) {
+              mediaHTML += `<div class="image-grid">${images
+                .map((img) => `<img src="${img.url}" alt="Imagem do projeto">`)
+                .join("")}</div>`;
+            }
+            if (video) {
+              mediaHTML += `<div class="video-wrapper"><video controls><source src="${video.url}" type="video/mp4">Seu navegador não suporta vídeo.</video></div>`;
+            }
+
+            html += `
+            <article class="post">
+              <h2>${post.title}</h2>
+              <div class="post-author">Por: ${post.author || "Anônimo"}</div>
+              ${linkHTML}
+              <div class="section-line"></div>
+              <div class="post-content">${post.content}</div>
+              ${mediaHTML ? `<div class="post-media">${mediaHTML}</div>` : ""}
+              <div class="post-meta"><time>${formatarDataHora(post.date, post.time)}</time></div>
+            </article>
+          `;
+          });
+
+          container.innerHTML = html;
+        }
+
+        renderPosts();
+
+        // Caso queira popular com um post inicial (descomente)
+        /*
+        if (!localStorage.getItem('posts')) {
+          const exemplo = [{
+            title: 'Meu Primeiro Projeto',
+            author: 'Yago',
+            content: 'Descrição do projeto...',
+            date: '2026-06-30',
+            time: '14:30',
+            media: [],
+          }];
+          localStorage.setItem('posts', JSON.stringify(exemplo));
+          renderPosts();
+        }
+        */
+      })();
+    </script>
+  </body>
+</html>

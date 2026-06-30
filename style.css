@@ -1,0 +1,689 @@
+/* ============================================================
+   FONTES
+============================================================ */
+@font-face {
+  font-family: "monsterFamily";
+  src: url("/fonts/8bit_operator/8bitOperatorPlus-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   RESET E BASE
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #1a1a1a;
+  --accent-color: #ff4444;
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --spoiler-bg: rgba(0, 0, 0, 0.7);
+  --font-family: "monsterFamily", monospace;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ff0;
+}
+
+/* ============================================================
+   SCROLLBAR PERSONALIZADA
+============================================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #fffa00;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   MENU DE NAVEGAÇÃO (fixo)
+============================================================ */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  float: left;
+  border-right: 3px solid #fff;
+  font-family: var(--font-family);
+}
+ul li:last-child {
+  border-left: 3px solid #fff;
+  border-right: none;
+  margin-left: auto;
+}
+
+ul li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+ul li a.active {
+  color: #ff0;
+  background-color: #f00;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #fffafa;
+  color: #000;
+}
+
+/* ============================================================
+   PÁGINAS (seções)
+============================================================ */
+.page {
+  display: none;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.page.active {
+  display: flex;
+}
+
+/* ========== HOME ========== */
+#home {
+  background: #000000;
+  align-items: center;
+  text-align: center;
+}
+#home .hero {
+  max-width: 800px;
+  padding: 2rem;
+}
+#home h1 {
+  font-size: 3rem;
+  color: #ff0;
+  letter-spacing: 2px;
+}
+#home p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+#home .idade {
+  color: #ff0;
+}
+
+/* ========== NOTÍCIAS ========== */
+#news {
+  background: #000000;
+  align-items: center;
+}
+#news .news-container {
+  max-width: 900px;
+  padding: 2rem;
+  width: 100%;
+}
+#news h2 {
+  color: #ff0;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.news-item {
+  background: #000000;
+  border-left: 4px solid #ff0;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-color: white;
+}
+.news-item h3 {
+  color: #ffd966;
+}
+.news-item time {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* ========== BLOG (PROJETOS) ========== */
+#blog {
+  background: #000000;
+  align-items: center;
+  background-image: url("/images/blog_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-start;
+}
+
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.blog-container h2 {
+  color: #ff0;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post {
+  background: var(--secondary-color);
+  border: 4px solid var(--primary-color);
+  padding: 30px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.post h2 {
+  color: yellow;
+  border: none;
+  font-size: 1.6rem;
+  margin: 0 0 0.2rem 0;
+  padding: 0;
+}
+
+.post-author {
+  font-size: 1.1em;
+  color: #fffb00;
+  margin: 8px 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* ----- LINK DO PROJETO (BOTÃO GITHUB) ----- */
+.project-link {
+  display: inline-block;
+  background: #24292e;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 8px 0 4px 0;
+  border: 1px solid #555;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-family: var(--font-family);
+}
+.project-link:hover {
+  background: #0366d6;
+  color: #fff;
+}
+
+.post-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.post-media {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.post-media .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+.post-media .image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+.video-wrapper {
+  margin-top: 10px;
+}
+.video-wrapper video {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 6px;
+  background: #000;
+  border: 2px solid var(--primary-color);
+}
+
+.post-meta {
+  font-size: 0.94em;
+  color: #7e7e7e;
+  margin: 8px 0 15px;
+  display: flex;
+  align-items: center;
+}
+.post-meta time {
+  font-weight: bold;
+  color: #444;
+}
+
+.section-line {
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+/* ----- COMENTÁRIOS ----- */
+.comment {
+  background: #111;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffd966;
+}
+.comment-author {
+  color: #ffd966;
+}
+
+.comment-body {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 14px;
+  word-break: break-word;
+}
+.comment-body.spoiler {
+  background: var(--spoiler-bg);
+  filter: blur(6px);
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+.comment-body.spoiler:hover {
+  filter: blur(2px);
+}
+.comment-body.spoiler.revealed {
+  filter: none;
+  background: transparent;
+}
+
+.comment-image {
+  max-width: 200px;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.toggle-replies {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #ff0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.toggle-replies:hover {
+  text-decoration: underline;
+}
+
+.replies-container {
+  background-color: #222;
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 2px solid #666;
+}
+.reply-comment {
+  margin-left: 10px;
+  padding: 5px;
+  border-left: 3px solid #888;
+  margin-bottom: 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.reply-comment strong {
+  color: #7a9eff;
+}
+
+.comment-form,
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.comment-form input,
+.comment-form textarea,
+.reply-form input,
+.reply-form textarea {
+  padding: 8px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.comment-form button,
+.reply-form button {
+  background: #000;
+  color: #ff0;
+  border: 2px solid #ff0;
+  padding: 10px;
+  font-family: var(--font-family);
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.comment-form button:hover,
+.reply-form button:hover {
+  background: #ff0;
+  color: #000;
+}
+
+.spoiler-label {
+  color: #aaa;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spoiler-label input {
+  width: auto;
+}
+
+/* ========== SOBRE ========== */
+#about {
+  align-items: center;
+  background: #000;
+  background-image: url("/images/bg_castle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-start;
+}
+
+.container {
+  width: 580px;
+  max-width: 92%;
+  background: #000;
+  border: 10px double #fff;
+  padding: 20px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.container h1 {
+  font-family: var(--font-family);
+  color: #ff0;
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.container p {
+  font-family: var(--font-family);
+  color: #fff;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: -10px;
+}
+
+.container p .yellow {
+  color: #ff0;
+}
+.idade {
+  color: #ff0;
+}
+
+/* ----- TOOLTIPS ----- */
+.tooltip-trigger {
+  position: relative;
+  cursor: help;
+  color: white;
+  display: inline-block;
+}
+
+.tooltip-trigger:hover {
+  text-decoration: underline dotted #aaa;
+  color: yellow;
+}
+
+.tooltip-trigger .tooltip-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  background: #000;
+  color: #f0f0f0;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  width: 320px;
+  max-width: 90vw;
+  text-align: left;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  pointer-events: none;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.tooltip-trigger .tooltip-content::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+.tooltip-trigger:hover .tooltip-content {
+  display: block;
+}
+
+.tooltip-content strong {
+  color: #ffd966;
+}
+.tooltip-content .check {
+  color: #6fcf97;
+}
+
+/* ----- REDES SOCIAIS (ícones) ----- */
+.social-icon {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+.social-icon.small {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* ========== ADMIN (caso use página separada) ========== */
+.admin-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: var(--font-family);
+  padding: 20px;
+}
+
+.media-manager {
+  border: 2px dashed #444;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.media-item {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.posts-management {
+  margin-top: 40px;
+}
+
+#postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: var(--secondary-color);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.delete-post {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-post {
+  background: green;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-comments {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+============================================================ */
+@media (max-width: 768px) {
+  ul li a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .container {
+    margin-left: 0;
+    width: 100%;
+    border-width: 5px;
+  }
+  .container h1 {
+    font-size: 26px;
+  }
+  .container p {
+    font-size: 17px;
+  }
+  #about {
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .tooltip-trigger .tooltip-content {
+    left: 0;
+    top: 100%;
+    transform: none;
+    width: 260px;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .tooltip-trigger .tooltip-content::after {
+    right: auto;
+    left: 20px;
+    border-color: transparent transparent #fff transparent;
+    top: -16px;
+  }
+
+  .post {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    flex-wrap: wrap;
+  }
+  ul li {
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    flex: 1 0 50%;
+    text-align: center;
+  }
+  ul li:last-child {
+    border-left: none;
+    flex: 1 0 100%;
+  }
+  .container p {
+    font-size: 15px;
+  }
+  .blog-container {
+    padding: 20px 10px;
+  }
+}
